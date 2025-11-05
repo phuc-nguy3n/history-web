@@ -7,6 +7,7 @@ import AboutPage from "./pages/AboutPage.jsx";
 import SearchPage from "./pages/SearchPage.jsx";
 import PostsPage from "./pages/PostsPage.jsx";
 import PostDetailPage from "./pages/PostDetailPage.jsx";
+import ChatBox from "./components/ChatBox/ChatBox.jsx";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/posts" element={<PostsPage />} />
         <Route path="/posts/:postId" element={<PostDetailPage />} />
       </Routes>
+      <ChatBox />
       <Footer />
     </>
   );
