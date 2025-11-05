@@ -1,33 +1,35 @@
-import { GoogleGenAI } from "@google/genai";
+// Thay đổi file: src/apis/gemini_api.js
 
-// 1. THIẾT LẬP API KEY
-// TỐT NHẤT là đọc từ biến môi trường (Environment Variable) để bảo mật
-// eslint-disable-next-line no-undef
-const GEMINI_API_KEY = import.meta.env.GEMINI_API_KEY;
+// SERVER_URL là địa chỉ của Server Node.js (Express) mà bạn vừa chạy
+// Khi deploy, bạn cần thay đổi nó thành domain thực tế của server
+const SERVER_URL = "http://localhost:3001";
 
-// Khởi tạo client
-const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
-
+/**
+ * Gửi câu hỏi đến Server Node.js (Endpoint: /api/chat) để xử lý bằng Gemini API
+ * @param {string} userQuestion - Câu hỏi của người dùng
+ * @returns {Promise<string>} - Câu trả lời từ Chatbot
+ */
 export async function getChatbotResponse(userQuestion) {
   try {
-    const modelName = "gemini-2.5-flash";
-
-    console.log(`Đang gửi yêu cầu với câu hỏi: ${userQuestion}`);
-
-    // 2. GỌI API (API CALL)
-    const response = await ai.models.generateContent({
-      model: modelName,
-      contents: userQuestion,
+    // 1. GỌI API ENDPOINT CỦA SERVER
+    const response = await fetch(`${SERVER_URL}/api/chat`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      }, // Gửi câu hỏi dưới dạng JSON
+      body: JSON.stringify({ question: userQuestion }),
     });
 
-    // 3. TRẢ VỀ KẾT QUẢ
-    return response.text;
+    if (!response.ok) {
+      // Xử lý lỗi từ Server Node.js (ví dụ: lỗi 500)
+      throw new Error(`Lỗi HTTP: ${response.status}`);
+    } // 2. Đọc kết quả JSON từ Server
+
+    const data = await response.json(); // Server Node.js trả về: { answer: "..." }
+
+    return data.answer;
   } catch (error) {
-    console.error("Lỗi khi gọi API Gemini:", error);
-    return "Xin lỗi, đã xảy ra lỗi trong quá trình xử lý.";
+    console.error("Lỗi khi giao tiếp với Server Backend:", error);
+    return "Xin lỗi, không thể kết nối đến dịch vụ chatbot.";
   }
 }
-
-// Ví dụ về cách sử dụng hàm này trên server của bạn
-// getChatbotResponse("Giải thích RAG trong 3 câu.")
-//   .then(answer => console.log("Phản hồi:", answer));
