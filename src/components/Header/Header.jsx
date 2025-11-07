@@ -106,13 +106,25 @@ export default function Header() {
               to="/about"
               className="text-sm font-medium text-slate-700 hover:text-blue-600"
             >
-              Về chúng tôi
+              Giới thiệu
             </Link>
             <Link
               to="/posts"
               className="text-sm font-medium text-slate-700 hover:text-blue-600"
             >
-              Bài viết
+              Miền Bắc
+            </Link>
+            <Link
+              to="/posts"
+              className="text-sm font-medium text-slate-700 hover:text-blue-600"
+            >
+              Miền Trung
+            </Link>
+            <Link
+              to="/posts"
+              className="text-sm font-medium text-slate-700 hover:text-blue-600"
+            >
+              Miền Nam
             </Link>
           </nav>
 

@@ -40,9 +40,9 @@ export function fetchCarouselSlides(delay = 400) {
 // =====================
 // Structure: { id, href, thumbnail, date, title, author, excerpt, content }
 export const postsData = {
-  ancient: {
-    slug: "ancient",
-    title: "Lịch sử Cổ đại",
+  north: {
+    slug: "north",
+    title: "Lịch sử Miền bắc",
     posts: [
       {
         id: 101,
@@ -85,9 +85,9 @@ export const postsData = {
       },
     ],
   },
-  medieval: {
-    slug: "medieval",
-    title: "Thời Trung cổ",
+  central: {
+    slug: "central",
+    title: "Lịch sử Miền Trung",
     posts: [
       {
         id: 201,
@@ -130,9 +130,9 @@ export const postsData = {
       },
     ],
   },
-  modern: {
-    slug: "modern",
-    title: "Cận - Hiện đại",
+  southern: {
+    slug: "southern",
+    title: "Lịch sử Miền Nam",
     posts: [
       {
         id: 301,

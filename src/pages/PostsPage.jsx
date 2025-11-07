@@ -15,9 +15,9 @@ export default function PostsPage() {
 
   const filteredPosts = useMemo(() => {
     if (filter === "all") return allPosts;
-    if (filter === "ancient") return categoryPosts.ancient.posts;
-    if (filter === "medieval") return categoryPosts.medieval.posts;
-    if (filter === "modern") return categoryPosts.modern.posts;
+    if (filter === "north") return categoryPosts.north.posts;
+    if (filter === "central") return categoryPosts.central.posts;
+    if (filter === "southern") return categoryPosts.southern.posts;
     return allPosts;
   }, [filter, allPosts]);
 
@@ -41,9 +41,9 @@ export default function PostsPage() {
             className="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 shadow-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
           >
             <option value="all">Tất cả</option>
-            <option value="ancient">{categoryPosts.ancient.title}</option>
-            <option value="medieval">{categoryPosts.medieval.title}</option>
-            <option value="modern">{categoryPosts.modern.title}</option>
+            <option value="north">{categoryPosts.north.title}</option>
+            <option value="central">{categoryPosts.central.title}</option>
+            <option value="southern">{categoryPosts.southern.title}</option>
           </select>
         </div>
       </header>
