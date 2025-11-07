@@ -1,4 +1,5 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import PostCard from "../components/PostCard/PostCard";
 import { categoryPosts } from "../apis/local_api";
 
@@ -11,13 +12,31 @@ export default function PostsPage() {
     return list;
   }, []);
 
+  const location = useLocation();
   const [filter, setFilter] = useState("all");
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const category = params.get("category");
+    if (category && ["north", "central", "southern"].includes(category)) {
+      setFilter(category);
+    } else {
+      setFilter("all");
+    }
+  }, [location.search]);
 
   const filteredPosts = useMemo(() => {
     if (filter === "all") return allPosts;
-    if (filter === "north") return categoryPosts.north.posts;
-    if (filter === "central") return categoryPosts.central.posts;
-    if (filter === "southern") return categoryPosts.southern.posts;
+    if (filter === "north")
+      return allPosts.filter((p) => p._category === categoryPosts.north.title);
+    if (filter === "central")
+      return allPosts.filter(
+        (p) => p._category === categoryPosts.central.title,
+      );
+    if (filter === "southern")
+      return allPosts.filter(
+        (p) => p._category === categoryPosts.southern.title,
+      );
     return allPosts;
   }, [filter, allPosts]);
 

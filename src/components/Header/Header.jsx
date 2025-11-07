@@ -109,19 +109,19 @@ export default function Header() {
               Giới thiệu
             </Link>
             <Link
-              to="/posts"
+              to="/posts?category=north"
               className="text-sm font-medium text-slate-700 hover:text-blue-600"
             >
               Miền Bắc
             </Link>
             <Link
-              to="/posts"
+              to="/posts?category=central"
               className="text-sm font-medium text-slate-700 hover:text-blue-600"
             >
               Miền Trung
             </Link>
             <Link
-              to="/posts"
+              to="/posts?category=southern"
               className="text-sm font-medium text-slate-700 hover:text-blue-600"
             >
               Miền Nam
@@ -220,22 +220,22 @@ export default function Header() {
                 Home
               </a>
               <a
-                href="#about"
+                href="/posts?category=north"
                 className="block rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100"
               >
-                {categoryPosts.ancient.title}
+                {categoryPosts.north.title}
               </a>
               <a
-                href="#timeline"
+                href="/posts?category=central"
                 className="block rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100"
               >
-                {categoryPosts.medieval.title}
+                {categoryPosts.central.title}
               </a>
               <a
-                href="#contact"
+                href="/posts?category=southern"
                 className="block rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100"
               >
-                {categoryPosts.modern.title}
+                {categoryPosts.southern.title}
               </a>
             </nav>
             <div className="border-t border-slate-200 pb-4">
