@@ -2,7 +2,7 @@
 
 // SERVER_URL là địa chỉ của Server Node.js (Express) mà bạn vừa chạy
 // Khi deploy, bạn cần thay đổi nó thành domain thực tế của server
-const SERVER_URL = "http://localhost:3001";
+const SERVER_URL = "https://gemini-server-m8bq.onrender.com";
 
 /**
  * Gửi câu hỏi đến Server Node.js (Endpoint: /api/chat) để xử lý bằng Gemini API
