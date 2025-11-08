@@ -48,7 +48,7 @@ export const postsData = {
         id: 101,
         href: "#",
         thumbnail:
-          "https://images.unsplash.com/photo-1761839258605-d1b118266ccc?ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+          "https://ik.imagekit.io/tvlk/blog/2022/11/go-and-share-van-mieu-quoc-tu-giam-ha-noi-1.jpg?tr=q-70,c-at_max,w-500,h-250,dpr-2",
         date: "2024-08-15",
         title: "Văn Miếu - Quốc Tử Giám (Hà Nội): Trường đại học đầu tiên của Việt Nam.",
         author: "Nguyễn Thụy Mộc Nhiên",
@@ -64,25 +64,25 @@ export const postsData = {
         id: 102,
         href: "#",
         thumbnail:
-          "https://images.unsplash.com/photo-1506806732259-39c2d0268443?auto=format&fit=crop&q=80&w=1200",
+          "https://www.vietnamairlines.com/~/media/SEO-images/2025%20SEO/Traffic%20TV/co-do-hoa-lu/co-do-hoa-lu.jpg",
         date: "2024-07-20",
-        title: "Ai Cập cổ đại và sông Nile",
+        title: "Cố đô Hoa Lư (Ninh Bình): Cố đô xưa của Việt Nam thời nhà Đinh và nhà Tiền Lê",
         author: "Gemini",
         excerpt:
           "Câu chuyện về các pharaoh, kim tự tháp và nền nông nghiệp ven sông Nile.",
         content:
-          "Ai Cập cổ đại là một trong những nền văn minh vĩ đại nhất, phát triển xung quanh dòng sông Nile màu mỡ. Các Pharaoh cai trị với quyền lực tối cao, cho xây dựng những kim tự tháp vĩ đại làm lăng mộ. Tôn giáo và tín ngưỡng về thế giới bên kia đóng một vai trò cực kỳ quan trọng trong đời sống của họ.",
-        img1: "",
-        img2: "",
+          "Cố đô Hoa Lư là đế đô đầu tiên của nước ta, tồn tại trong 42 năm. Mảnh đất này là nơi đã chứng kiến sự nghiệp dựng nước và giữ nước oai hùng của 12 năm triều Đinh (968 – 980), 29 năm triều Tiền Lê (980 – 1009) và đầu nhà Lý (1009 – 1010).Với địa thế đồi núi trùng điệp bao bọc xung quanh vành đai kinh đô như tấm bình phong vững chãi, cùng dòng Hoàng Long uốn khúc và cánh đồng Nho Quan, Gia Viễn với hào sâu, Hoa Lư là vùng đất có giá trị cao về mặt quân sự. Chính tại vùng đất này, năm 968, Đinh Bộ Lĩnh đã dẹp loạn 12 sứ quân, lên ngôi hoàng đế, lập ra nước Đại Cồ Việt oai hùng, và Hoa Lư trở thành trung tâm chính trị, đồng thời là đế đô đầu tiên của nước ta.Đến thời vua Lý Thái Tổ, ông đã đưa ra quyết định dời dô lịch sử, và Hoàng thành Thăng Long chính là nơi được lựa chọn khi nhận ra kinh đô Hoa Lư chật hẹp, khó mở mang thành đô và không phù hợp với vị thế đất nước lúc bấy giờ. Chính quyết định mang tính chất lịch sử này đã kết thúc những tháng ngày Hoa Lư là vùng đất cố đô của nước ta. Tuy nhiên, hệ thống triều đình và cơ sở vật chất của Hoàng thành Thăng Long lúc bấy giờ đều thừa hưởng từ kinh đô Hoa Lư ngày trước. Tuy sau này các vua không sinh sống tại đây nữa, nhưng Cố đô Hoa Lư vẫn tiếp tục được xây dựng những công trình kiến trúc kiên cố với đền, chùa, đền thờ và được bảo tồn cho đến tận ngày nay.",
+        img1: "https://mia.vn/media/uploads/blog-du-lich/co-do-hoa-lu-dau-an-vang-son-cua-mot-thoi-dan-toc-oai-hung-7-1640596092.jpg",
+        img2: "https://mia.vn/media/uploads/blog-du-lich/co-do-hoa-lu-dau-an-vang-son-cua-mot-thoi-dan-toc-oai-hung-2-1640595875.jpg",
         content2: "",
       },
       {
         id: 103,
         href: "#",
         thumbnail:
-          "https://images.unsplash.com/photo-1761872936220-1531e97a158a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=764",
+          "https://image.vietgoing.com/destination/large/vietgoing_roc2101114012.webp",
         date: "2024-06-02",
-        title: "Hy Lạp cổ đại: cái nôi dân chủ",
+        title: "Đền Hùng (Phú Thọ): Nơi thờ các vị vua Hùng, tổ tiên của dân tộc",
         author: "Gemini",
         excerpt:
           "Tư tưởng triết học, khoa học và nghệ thuật đặt nền móng cho văn minh phương Tây.",
@@ -102,9 +102,9 @@ export const postsData = {
         id: 201,
         href: "#",
         thumbnail:
-          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&q=80&w=1200",
+          "https://lophocnguvan.com/wp-content/uploads/thuyet-minh-di-tich-ngo-mon-hoang-thanh-hue.jpg",
         date: "2024-05-10",
-        title: "Đế chế Byzantine và di sản",
+        title: "Quần thể di tích Cố đô Huế (Thừa Thiên Huế): Di sản văn hóa thế giới, kinh đô của triều Nguyễn",
         author: "Gemini",
         excerpt:
           "Cầu nối giữa cổ đại và hiện đại, lưu giữ tri thức và nghệ thuật phương Đông - phương Tây.",
@@ -118,9 +118,9 @@ export const postsData = {
         id: 202,
         href: "#",
         thumbnail:
-          "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&q=80&w=1200",
+          "https://upload.wikimedia.org/wikipedia/commons/0/07/2024_-_M%E1%BB%B9_S%C6%A1n_Group_B%2C_C_and_D_-_img_23.jpg",
         date: "2024-04-18",
-        title: "Châu Âu thời phong kiến",
+        title: "Thánh địa Mỹ Sơn (Quảng Nam): Thánh địa Hindu cổ của vương quốc Chăm Pa",
         author: "Gemini",
         excerpt:
           "Cấu trúc xã hội phong kiến và mối quan hệ lãnh chúa - nông nô trong nhiều thế kỷ.",
@@ -134,9 +134,9 @@ export const postsData = {
         id: 203,
         href: "#",
         thumbnail:
-          "https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&q=80&w=1200",
+          "https://cdn3.ivivu.com/2012/06/thanh-nha-ho-thanh-hoa-1.jpg",
         date: "2024-03-22",
-        title: "Các cuộc Thập tự chinh",
+        title: "Thành nhà Hồ (Thanh Hóa): Công trình kiến trúc độc đáo thời nhà Trần",
         author: "Gemini",
         excerpt:
           "Xung đột tôn giáo, thương mại và giao lưu văn hóa giữa Đông và Tây.",
@@ -156,9 +156,9 @@ export const postsData = {
         id: 301,
         href: "#",
         thumbnail:
-          "https://images.unsplash.com/photo-1465326117523-6450112b60b2?auto=format&fit=crop&q=80&w=1200",
+          "https://ik.imagekit.io/tvlk/blog/2025/04/dinh-doc-lap.jpg?tr=q-70,c-at_max,w-500,h-300,dpr-2",
         date: "2024-02-05",
-        title: "Cách mạng công nghiệp",
+        title: "Dinh Độc Lập (TP.HCM): Biểu tượng của miền Nam Việt Nam, nơi chấm dứt chiến tranh năm 1975",
         author: "Gemini",
         excerpt:
           "Sự bùng nổ công nghệ, đô thị hóa và những thay đổi sâu rộng về kinh tế - xã hội.",
@@ -172,9 +172,9 @@ export const postsData = {
         id: 302,
         href: "#",
         thumbnail:
-          "https://images.unsplash.com/photo-1472437774355-71ab6752b434?auto=format&fit=crop&q=80&w=1200",
+          "https://tphcm.cdnchinhphu.vn/zoom/600_315/Uploads/images/2017/B%E1%BA%A3o%20t%C3%A0ng%20ch%E1%BB%A9ng%20t%C3%ADch%20chi%E1%BA%BFn%20tranh.jpg",
         date: "2024-01-12",
-        title: "Thế chiến thứ nhất",
+        title: "Bảo tàng Chứng tích chiến tranh (TP.HCM): Nơi trưng bày những chứng tích đau thương của chiến tranh",
         author: "Gemini",
         excerpt:
           "Nguyên nhân, diễn biến và hệ quả địa chính trị của cuộc chiến toàn cầu đầu tiên.",
@@ -188,9 +188,9 @@ export const postsData = {
         id: 303,
         href: "#",
         thumbnail:
-          "https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&q=80&w=1200",
+          "https://vetaucondao.vn/wp-content/uploads/2019/09/30-nam-hoat-dong-bi-mat-cua-chuong-cop-tai-nha-tu-con-dao.jpg",
         date: "2023-12-09",
-        title: "Kỷ nguyên thông tin",
+        title: "Nhà tù Côn Đảo (Bà Rịa - Vũng Tàu): Một trong những nhà tù khắc nghiệt nhất thời Pháp thuộc và Mỹ",
         author: "Gemini",
         excerpt:
           "Internet, toàn cầu hóa và sự chuyển dịch sang nền kinh tế tri thức.",
