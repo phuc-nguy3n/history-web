@@ -1,35 +1,50 @@
-// Thay đổi file: src/apis/gemini_api.js
+// src/apis/gemini_api.js
 
-// SERVER_URL là địa chỉ của Server Node.js (Express) mà bạn vừa chạy
-// Khi deploy, bạn cần thay đổi nó thành domain thực tế của server
 const SERVER_URL = "https://gemini-server-m8bq.onrender.com";
 
 /**
- * Gửi câu hỏi đến Server Node.js (Endpoint: /api/chat) để xử lý bằng Gemini API
+ * Gửi câu hỏi và xử lý luồng phản hồi
  * @param {string} userQuestion - Câu hỏi của người dùng
- * @returns {Promise<string>} - Câu trả lời từ Chatbot
+ * @param {function} onChunk - Hàm callback được gọi với mỗi đoạn văn bản mới
  */
-export async function getChatbotResponse(userQuestion) {
+export async function getChatbotResponseStream(userQuestion, onChunk) {
   try {
-    // 1. GỌI API ENDPOINT CỦA SERVER
     const response = await fetch(`${SERVER_URL}/api/chat`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-      }, // Gửi câu hỏi dưới dạng JSON
+      },
       body: JSON.stringify({ question: userQuestion }),
     });
 
     if (!response.ok) {
-      // Xử lý lỗi từ Server Node.js (ví dụ: lỗi 500)
-      throw new Error(`Lỗi HTTP: ${response.status}`);
-    } // 2. Đọc kết quả JSON từ Server
+      // Đã thay đổi: Server gửi lỗi dưới dạng plain text, không phải JSON
+      const errorText = await response.text();
+      throw new Error(`Lỗi Server: ${response.status} - ${errorText}`);
+    }
 
-    const data = await response.json(); // Server Node.js trả về: { answer: "..." }
+    // BẮT ĐẦU XỬ LÝ STREAM
+    const reader = response.body.getReader();
+    const decoder = new TextDecoder("utf-8"); // Dùng để chuyển bytes thành văn bản
 
-    return data.answer;
+    let done = false;
+
+    while (!done) {
+      // Bước quan trọng: Đọc một đoạn dữ liệu từ stream
+      const { value, done: readerDone } = await reader.read();
+
+      done = readerDone;
+
+      if (value) {
+        // Chuyển đổi bytes thành văn bản
+        const chunk = decoder.decode(value, { stream: true });
+
+        // 🎯 GỌI HÀM CALLBACK VỀ COMPONENT REACT
+        onChunk(chunk);
+      }
+    }
   } catch (error) {
     console.error("Lỗi khi giao tiếp với Server Backend:", error);
-    return "Xin lỗi, không thể kết nối đến dịch vụ chatbot.";
+    throw new Error("Không thể kết nối hoặc xử lý stream từ server.");
   }
 }

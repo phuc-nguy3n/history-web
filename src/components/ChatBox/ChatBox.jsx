@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { getChatbotResponse } from "../../apis/gemini_api"; // Điều chỉnh đường dẫn nếu cần
+import { getChatbotResponseStream } from "../../apis/gemini_api"; // Điều chỉnh đường dẫn nếu cần
 import "./ChatBox.css";
 
 function ChatBox() {
@@ -31,40 +31,51 @@ function ChatBox() {
       setMessages((prevMessages) => [...prevMessages, userMessage]);
       setInputValue("");
 
-      // 2. Thêm placeholder 'Bot đang trả lời'
-      const botPlaceholderId = Date.now() + 1;
+      // 2. Thêm placeholder và lấy ID tin nhắn mới
+      const botMessageId = Date.now() + 1;
       setMessages((prevMessages) => [
         ...prevMessages,
         {
-          id: botPlaceholderId,
-          text: "🤖 Đang tìm kiếm thông tin...",
+          id: botMessageId,
+          text: "🤖",
           sender: "bot",
           loading: true,
+          isStreaming: true,
         },
       ]);
 
       try {
-        // 3. GỌI API AN TOÀN ĐẾN SERVER NODE.JS
-        const botAnswer = await getChatbotResponse(userQuestion);
+        // 3. GỌI API VÀ CUNG CẤP HÀM CALLBACK (onChunk)
+        await getChatbotResponseStream(userQuestion, (chunk) => {
+          // HÀM CALLBACK: Cập nhật tin nhắn mỗi khi có một đoạn văn bản mới
+          setMessages((prevMessages) =>
+            prevMessages.map((msg) =>
+              msg.id === botMessageId
+                ? { ...msg, text: msg.text + chunk } // 👈 NỐI THÊM CHUNK VÀO VĂN BẢN HIỆN TẠI
+                : msg,
+            ),
+          );
+        });
 
-        // 4. Cập nhật placeholder bằng câu trả lời thực
+        // 4. KẾT THÚC STREAMING: Tắt trạng thái loading
         setMessages((prevMessages) =>
           prevMessages.map((msg) =>
-            msg.id === botPlaceholderId
-              ? { ...msg, text: botAnswer, loading: false }
+            msg.id === botMessageId
+              ? { ...msg, loading: false, isStreaming: false }
               : msg,
           ),
         );
       } catch (error) {
         console.error("Lỗi khi gửi tin nhắn:", error);
-        // Cập nhật placeholder thành thông báo lỗi
+        // Xử lý lỗi
         setMessages((prevMessages) =>
           prevMessages.map((msg) =>
-            msg.id === botPlaceholderId
+            msg.id === botMessageId
               ? {
                   ...msg,
-                  text: "Xin lỗi, không thể kết nối đến chatbot.",
+                  text: "Xin lỗi, không thể xử lý yêu cầu.",
                   loading: false,
+                  isStreaming: false,
                 }
               : msg,
           ),
