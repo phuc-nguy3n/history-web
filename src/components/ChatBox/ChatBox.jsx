@@ -14,7 +14,7 @@ function ChatBox() {
   const [inputValue, setInputValue] = useState("");
 
   const toggleChatBox = () => {
-    setIsOpen(!isOpen);
+    window.open("https://chatgpt.com/g/g-p-691167b88ce88191beebad455c6b8202-edu-ai/project", "_blank", "noopener,noreferrer");
   };
 
   const handleInputChange = (e) => {
