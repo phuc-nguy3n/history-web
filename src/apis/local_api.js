@@ -7,22 +7,22 @@
 // =====================
 export const carouselSlides = [
   {
-    src: "https://images.unsplash.com/photo-1494200483035-db7bc6aa5739?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+    src: "https://ik.imagekit.io/tvlk/blog/2022/11/go-and-share-van-mieu-quoc-tu-giam-ha-noi-1.jpg?tr=q-70,c-at_max,w-500,h-250,dpr-2",
     alt: "Vite",
     caption: "Vite Logo",
   },
   {
-    src: "https://images.unsplash.com/photo-1504006833117-8886a355efbf?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+    src: "https://hoangthanhthanglong.vn/wp-content/uploads/2023/05/codohue.jpg",
     alt: "React",
     caption: "React Logo",
   },
   {
-    src: "https://images.unsplash.com/photo-1504618223053-559bdef9dd5a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+    src: "https://baotangbrvt.org.vn/wp-content/uploads/2011/04/di-tich-nha-tu-con-dao.jpg",
     alt: "Unsplash Sample",
     caption: "Sample photo from Unsplash",
   },
   {
-    src: "https://images.unsplash.com/photo-1497752531616-c3afd9760a11?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+    src: "https://mia.vn/media/uploads/blog-du-lich/co-do-hoa-lu-dau-an-vang-son-cua-mot-thoi-dan-toc-oai-hung-7-1640596092.jpg",
     alt: "History Landscape",
     caption: "Historic landscapes through time",
   },
