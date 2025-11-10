@@ -164,9 +164,9 @@ export const postsData = {
 
         content:
           "Công trình do viên thống đốc Pháp tại miền Nam Việt Nam là La Grandière đặt viên đá đầu tiên khởi công xây dựng ngày 23/2/1868 và hoàn tất vào năm 1871. Từ 1887 – 1945, nhiều đời toàn quyền Pháp đã sử dụng dinh thự này làm nơi ở và làm việc trong suốt thời kỳ xâm lược Ðông Dương.",
-        img1: "",
-        img2: "",
-        content2: "",
+        img1: "https://statics.vinwonders.com/dinh-doc-lap-1_1624804960.jpg",
+        img2: "https://statics.vinwonders.com/dinh-doc-lap-8_1624805286.jpg",
+        content2: "Trải qua nhiều lần đổi tên, hiện nay, khu di tích có tên gọi Dinh Độc Lập. Ý nghĩa Dinh Độc Lập mang sự tự hào về dân tộc, về 1 thời hào hùng chống thực dân xâm lược.",
       },
       {
         id: 302,
@@ -179,9 +179,9 @@ export const postsData = {
         //author: "Gemini",
         content:
           "Thế chiến thứ nhất (1914-1918) là một cuộc xung đột toàn cầu thảm khốc, lôi kéo các cường quốc trên thế giới vào hai phe đối đầu. Cuộc chiến này không chỉ gây ra tổn thất nhân mạng khủng khiếp mà còn vẽ lại bản đồ chính trị thế giới, dẫn đến sự sụp đổ của nhiều đế chế.",
-        img1: "",
-        img2: "",
-        content2: "",
+        img1: "https://statics.vinpearl.com/bao-tang-chung-tich-chien-tranh-1_1689689648.jpeg",
+        img2: "https://statics.vinpearl.com/bao-tang-chung-tich-chien-tranh-2_1689689629.jpg",
+        content2: "Bảo tàng có chức năng nghiên cứu, sưu tầm, lưu trữ, bảo quản và trưng bày tư liệu, hình ảnh, hiện vật về hậu quả tàn khốc của cuộc chiến tranh mà các thế lực xâm lược đã gây ra cho Việt Nam. Đồng thời, bảo tàng cũng truyền tải thông điệp về tinh thần đấu tranh bảo vệ nền độc lập, ý thức chống chiến tranh, giữ gìn hòa bình và tình hữu nghị giữa các dân tộc. ",
       },
       {
         id: 303,
@@ -194,9 +194,9 @@ export const postsData = {
         //author: "Gemini",
         content:
           "Sự ra đời của máy tính cá nhân và Internet đã mở ra Kỷ nguyên Thông tin. Toàn cầu hóa được thúc đẩy mạnh mẽ, và nền kinh tế thế giới dần chuyển dịch từ sản xuất công nghiệp sang dịch vụ và tri thức. Thông tin trở thành tài sản quý giá nhất.",
-        img1: "",
-        img2: "",
-        content2: "",
+        img1: "https://owa.bestprice.vn/images/articles/uploads/nha-tu-con-dao-o-dau-kham-pha-nha-tu-con-dao-5f3b88abbe95f.jpg",
+        img2: "https://baotangbrvt.org.vn/wp-content/uploads/2011/04/di-tich-nha-tu-con-dao.jpg",
+        content2: "Trong lịch sử, chính quyền thực dân Pháp và Việt Nam Cộng hòa đã cho xây dựng 127 phòng giam, 42 xà lim và 504 phòng giam biệt lập (hay còn gọi là chuồng cọp) tại Côn Đảo. Sau khi đất nước hoàn toàn thống nhất (1975), chức năng của hệ thống nhà tù ở Côn Đảo bị giải thể. Năm 1979, Khu di tích lịch sử Côn Đảo đã được Bộ Văn hóa - Thông tin xếp hạng di tích quốc gia, với 17 di tích thành phần.",
       },
     ],
   },
