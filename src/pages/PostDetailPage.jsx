@@ -61,7 +61,7 @@ export default function PostDetailPage() {
             <h1 className="text-3xl font-extrabold leading-tight text-slate-900 sm:text-4xl">
               {post.title}
             </h1>
-            <div className="mt-3 flex items-center gap-4 text-sm text-slate-500">
+            {/* <div className="mt-3 flex items-center gap-4 text-sm text-slate-500">
               <span>
                 Tác giả:{" "}
                 <span className="font-medium text-slate-600">{post.author}</span>
@@ -73,13 +73,13 @@ export default function PostDetailPage() {
                   {new Date(post.date).toLocaleDateString("vi-VN")}
                 </time>
               </span>
-            </div>
+            </div> */}
           </header>
 
           {/* Updated content section based on the UI image */}
           <div className="prose prose-slate prose-img:rounded-lg prose-figcaption:text-center max-w-none">
             {post.img1 && (
-              <figure className="my-8">
+              <figure className="my-8 flex justify-center">
                 <img
                   src={post.img1}
                   alt={post.title}
@@ -89,7 +89,7 @@ export default function PostDetailPage() {
             )}
             <p>{post.content}</p>
             {post.img2 && (
-              <figure className="my-8">
+              <figure className="my-8 flex justify-center">
                 <img
                   src={post.img2}
                   alt={post.title}
