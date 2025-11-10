@@ -106,7 +106,7 @@ function ChatBox() {
       {isOpen && (
         <div className="chatbox">
           <div className="chatbox-header">
-            <h3>Chat với Gemini</h3>
+            <h3>Chat với AI EDU</h3>
             <button className="chatbox-close" onClick={toggleChatBox}>
               &times;
             </button>
