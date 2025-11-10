@@ -86,9 +86,7 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Brand */}
           <Link to="/" className="flex items-center gap-2">
-            <span className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-blue-600 font-bold text-white">
-              H
-            </span>
+            <img src="/logo.webp" alt="logo" className="h-8 w-8" />
             <span className="text-lg font-semibold text-slate-900">
               History
             </span>
