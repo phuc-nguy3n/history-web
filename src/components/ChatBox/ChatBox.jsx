@@ -3,7 +3,7 @@ import { getChatbotResponseStream } from "../../apis/gemini_api"; // Điều ch�
 import "./ChatBox.css";
 
 function ChatBox() {
-  const [isOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
     {
       id: 1,
@@ -14,11 +14,7 @@ function ChatBox() {
   const [inputValue, setInputValue] = useState("");
 
   const toggleChatBox = () => {
-    window.open(
-      "https://chatgpt.com/g/g-p-691167b88ce88191beebad455c6b8202-edu-ai/project",
-      "_blank",
-      "noopener,noreferrer",
-    );
+    setIsOpen(!isOpen);
   };
 
   const handleInputChange = (e) => {
